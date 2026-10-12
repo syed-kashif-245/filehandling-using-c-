@@ -13,10 +13,10 @@ class program
             foreach(string line in lines)
             {
                 string[] parts=line.Split('=');
-                if (part.Length != 2)
+                if (parts.Length != 2)
                 {
                     throw new Exception("malformed line "+line);
-                }git 
+                }
                 if (string.IsNullOrWhiteSpace(parts[1]))
                     throw new Exception("Empty value: " + line);
                 dict[parts[0]] = parts[1];
